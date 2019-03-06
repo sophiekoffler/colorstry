@@ -1,0 +1,77 @@
+body{max-width: 90%;
+    font-size: 16px;
+    margin:0 auto;
+    background-color: black;}
+
+.container {max-width: 90%;
+            margin:0 auto;
+            background-color: lightgrey;}
+
+.horizontal {display:flex;
+            flex-direction: row;}
+
+.vertical {display:flex;
+          flex-direction: column;}
+
+.row {background-color: white;
+      justify-content:center;
+      padding-top: 1rem;}
+
+.story {background-color: white;
+        width:30%;
+        height:15rem;
+        margin-right: 1rem;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;}
+.story:last-child {margin-right:0px;}
+
+.tag {display: none;}
+
+#logo {justify-content: center;
+      font-size: 3rem;
+      }
+#logo span {padding:1rem;}
+
+.story:hover {opacity: .5;
+              font-weight:bold;}
+.story:hover .tag{display: block;}
+
+#s1 {background-image: url("./../images/bayou.jpg");
+    background-position: center;
+    background-size: contain;
+    }
+#s2 {background-image: url("./../images/bluewoods.jpg");
+        background-position: center;
+        background-size: contain;
+        }
+#s3 {background-image: url("./../images/boat.jpg");
+            background-position: center;
+            background-size: contain;
+          }
+#s4 {background-image: url("./../images/colorexplosion.jpg");
+                background-position: center;
+                background-size: contain;
+                }
+#s5 {background-image: url("./../images/cool.jpg");
+    background-position: center;
+    background-size: contain;
+    }
+
+#s6 {background-image: url("./../images/nature1.jpg");
+    background-position: center;
+    background-size: contain;
+        }
+
+#s7 {background-image: url("./../images/plato.jpg");
+    background-position: center;
+    background-size: contain;
+            }
+#s8 {background-image: url("./../images/pond.jpg");
+    background-position: center;
+    background-size: contain;
+                }
+#s9 {background-image: url("./../images/pretty.jpg");
+                    background-position: center;
+                    background-size: contain;
+                    }
