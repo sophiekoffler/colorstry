@@ -9,7 +9,9 @@ h1 {font-size:3rem;}
 #mainC {display:grid;
   margin:1rem;
         grid-template-columns: minmax(1rem,1fr) minmax(.5rem,1.5rem) 2fr 4fr ;
+        -ms-grid-template-columns: minmax(1rem,1fr) minmax(.5rem,1.5rem) 2fr 4fr ;
         grid-template-rows: 5.25rem 3.125rem 3.125rem 1fr 1fr 3.125rem;
+        -ms-grid-template-rows: 5.25rem 3.125rem 3.125rem 1fr 1fr 3.125rem;
         grid-column-gap: 0rem;
         height:800px;}
 #artC {
@@ -28,6 +30,7 @@ h1 {font-size:3rem;}
     margin:.5rem;
     grid-gap:1rem;
     grid-template-columns: repeat(auto-fill, 200px);
+    -ms-grid-template-columns: repeat(auto-fill, 200px);
 }
 #knitC,#metalC, #mosaicC, #paperC, #photoC, #potteryC
 {
@@ -36,7 +39,7 @@ h1 {font-size:3rem;}
   margin:.5rem;
   grid-gap:1rem;
   grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
-
+ -ms-grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
 }
 img {width:100%;
     height:100%;
@@ -59,11 +62,11 @@ img {width:100%;
       display: none;
       font-size:2rem;
 }
-#equivM {display:none;}
+.mobile, #equivM {display:none;}
 #c {grid-area:1/3/2/4;
     text-align: right;
     margin-right: .5rem;}
-#cA {grid-area:1/4/2/5;
+#cAC,#cA {grid-area:1/4/2/5;
     margin-left:.5rem;}
 #by {grid-area: 2/4/3/5;
     margin-left:.5rem;
@@ -88,7 +91,8 @@ img {width:100%;
           background-color:black;}
 @media only screen and (max-width:1084px){
   #mainC{
-    grid-template-columns: minmax(.75rem,1rem) minmax(.25rem,1rem) 2fr 4fr ;}
+    grid-template-columns: minmax(.75rem,1rem) minmax(.25rem,1rem) 2fr 4fr ;
+    -ms-grid-template-columns: minmax(.75rem,1rem) minmax(.25rem,1rem) 2fr 4fr ;}
 
   #footer {display:none;}
   #footerSmall {
@@ -99,41 +103,59 @@ img {width:100%;
           }
 }
 @media only screen and (max-width:800px){
-  #equiv {display:none;}
-  #equivM {display:inline;}
+  h1 {font-size: 2rem;}
+
+  #mainC {display:grid;
+    margin:.25rem;
+          grid-template-columns: minmax(.75rem,1rem) minmax(.25rem,1rem) 2fr 4fr ;
+          -ms-grid-columns:minmax(.75rem,1rem) minmax(.25rem,1rem) 2fr 4fr ;
+          grid-template-rows: 4.25rem 3.125rem 3.125rem 1fr 1fr 3.125rem;
+          -ms-grid-template-rows: 4.25rem 3.125rem 3.125rem 1fr 1fr 3.125rem;
+          grid-column-gap: 0rem;
+          height:800px;}
   #artC {
         margin:.5rem;
         grid-template-columns:repeat(auto-fill, 200px);
         -ms-grid-columns:repeat(auto-fill, minmax(200px, 1fr));
-        grid-template-columns:auto-fill;
+
       }
 
 }
 @media only screen and (max-width:660px){
   #by {justify-content: flex-end;
 }
-#equivM{display:none;}
-#equiv {display:inline;}
+
+
+#equiv {display:inline;
+        grid-area:2/5/3/6;}
 #cA {display:flex;
+    grid-area:2/6/3/7;
     align-items: flex-end;}
 }
 @media only screen and (max-width:580px){
   #mainC {display:grid;
     margin:.25rem;
           grid-template-columns: minmax(.75rem,1rem) minmax(.25rem,1rem) 2fr 4fr ;
+          -ms-grid-template-columns: minmax(.75rem,1rem) minmax(.25rem,1rem) 2fr 4fr ;
           grid-template-rows: 5.25rem 3.125rem 3.125rem 1fr 1fr 3.125rem;
+          -ms-grid-template-rows: 5.25rem 3.125rem 3.125rem 1fr 1fr 3.125rem;
           grid-column-gap: 0rem;
           height:800px;}
   #artC {
           grid-template-columns:1fr;
+          grid-columns:repeat(auto-fill,minmax(200px,1fr));
           -ms-grid-columns:repeat(auto-fill,minmax(200px,1fr));
           }
 #cA{align-items: center;}
 h1{font-size: 2rem;}
   }
+@media only screen and (max-width:450px){
+  h1 {font-size: 1.5rem;}
+}
 @media only screen and (max-width:400px){
   #mainC{
     grid-template-rows: 4rem 1.5rem 1.5rem 1fr 1fr 3.125rem;
+    -ms-grid-template-rows: 4rem 1.5rem 1.5rem 1fr 1fr 3.125rem;
   }
   #by {font-size:.75rem;}
 
@@ -141,6 +163,7 @@ h1{font-size: 2rem;}
 @media only screen and (max-width:384px){
   #mainC{
     grid-template-rows: 4rem 1rem 1.5rem 1fr 1fr 3.125rem;
+    -ms-grid-template-rows: 4rem 1rem 1.5rem 1fr 1fr 3.125rem;
   }
     #footerSmall{font-size: .75rem;}
     h1  {font-size: 1.5rem;}
