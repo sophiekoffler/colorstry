@@ -3,6 +3,7 @@ var toggle=false;
 function largeImage(src){
   console.log("src" + src);
   var div = document.getElementById("largeImage");
+
   div.style.position="fixed";
   div.style.display="grid";
   div.style.alignItems="flex-start"
@@ -13,6 +14,9 @@ if(toggle==false){
   child.style.position="fixed";
   child.style.objectFit = "contain";
   child.style.margin="0 auto";
+  child.style.backgroundColor="black";
+  child.style.top = "0";
+  child.style.left="0";
   child.addEventListener("click", function() {togYN()});
   div.appendChild(child);
   toggle=true;
@@ -31,6 +35,8 @@ function togYN(){
   }
 }
 
+//add a listener to each image so when it's clicked
+//it is enlarged and the user can see it in its entirety
 window.onload = function(){
 var pieces = document.getElementsByTagName('img');
 var main = document.getElementById("mainC");
@@ -41,6 +47,7 @@ for (p in pieces){
   }
 
 }
+//Close enlarged image with ESC key
 window.addEventListener("keydown",function(event){
   if(event.defaultPrevented)
     return;

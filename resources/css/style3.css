@@ -28,7 +28,6 @@ h1 {
   margin: 0.5rem;
   grid-template-rows: 50% 50%;
   -ms-grid-columns: repeat(4, 1fr);
-  -ms-grid-rows: 50% 50%;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
 }
@@ -173,7 +172,7 @@ img {
 
   #artC {
     margin: 0.5rem;
-    grid-template-columns: repeat(auto-fill, 200px);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     -ms-grid-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }
