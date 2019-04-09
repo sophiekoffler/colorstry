@@ -204,12 +204,6 @@ img {
     height: 800px;
   }
 
-  #artC {
-    grid-template-columns: 1fr;
-    grid-columns: repeat(auto-fill, minmax(200px, 1fr));
-    -ms-grid-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
-
   #cA {
     align-items: center;
   }
@@ -221,6 +215,10 @@ img {
 @media only screen and (max-width: 450px) {
   h1 {
     font-size: 1.5rem;
+  }
+
+  #artC {
+    grid-template-columns: 1fr;
   }
 }
 @media only screen and (max-width: 400px) {

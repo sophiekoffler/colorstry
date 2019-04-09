@@ -141,16 +141,18 @@ img {width:100%;
           -ms-grid-template-rows: 5.25rem 3.125rem 3.125rem 1fr 1fr 3.125rem;
           grid-column-gap: 0rem;
           height:800px;}
-  #artC {
-          grid-template-columns:1fr;
-          grid-columns:repeat(auto-fill,minmax(200px,1fr));
-          -ms-grid-columns:repeat(auto-fill,minmax(200px,1fr));
-          }
+
 #cA{align-items: center;}
 h1{font-size: 2rem;}
   }
 @media only screen and (max-width:450px){
   h1 {font-size: 1.5rem;}
+  #artC {
+          grid-template-columns:1fr;
+        //  grid-columns:repeat(auto-fill,minmax(200px,1fr));
+        //  -ms-grid-columns:repeat(auto-fill,minmax(200px,1fr));
+        
+          }
 }
 @media only screen and (max-width:400px){
   #mainC{
