@@ -19,7 +19,7 @@ h1 {
   grid-template-rows: 5.25rem 3.125rem 3.125rem 1fr 1fr 3.125rem;
   -ms-grid-template-rows: 5.25rem 3.125rem 3.125rem 1fr 1fr 3.125rem;
   grid-column-gap: 0rem;
-  height: 800px;
+  height: 85vh;
 }
 
 #artC {
